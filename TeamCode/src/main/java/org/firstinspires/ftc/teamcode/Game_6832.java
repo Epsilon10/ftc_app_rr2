@@ -307,6 +307,7 @@ public class Game_6832 extends LinearOpMode {
 
                         break;
                     case 7:
+                        /*
                         if (toggleAllowed(gamepad1.y,y))
                             pCoeff+=.01;
                         else if (toggleAllowed(gamepad1.a, a))
@@ -326,7 +327,8 @@ public class Game_6832 extends LinearOpMode {
                         telemetry.addData("Target Ange: ", targetAngle);
                         telemetry.update();
                         robot.balance(targetAngle);
-
+                        */
+                        servoTest();
 
 
                         break;
@@ -898,7 +900,7 @@ public class Game_6832 extends LinearOpMode {
     private int servoTest = 900;
 
     private void servoTest() {
-        robot.ledSystem.movement.setPosition(servoNormalize(servoTest));
+        robot.hook.setPosition(servoNormalize(servoTest));
         if (toggleAllowed(gamepad1.a, a))
             servoTest -= 20;
         else if (toggleAllowed(gamepad1.y, y))
